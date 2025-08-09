@@ -9,16 +9,21 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/static/(.*)",
-      "headers": {
-        "cache-control": "s-maxage=31536000,immutable"
-      }
-    },
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "cache-control",
+          "value": "s-maxage=31536000,immutable"
+        }
+      ]
     }
   ],
   "cleanUrls": true,
