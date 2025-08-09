@@ -169,7 +169,6 @@ const formStyle = {
 
 const inputStyle = {
   padding: '15px',
-  border: 'none',
   borderRadius: '8px',
   fontSize: '1rem',
   background: 'rgba(255, 255, 255, 0.1)',
